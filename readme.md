@@ -5,8 +5,9 @@
 Homebrew Formulae to [PRM](https://github.com/ldez/prm) binaries, powered by @goreleaser
 
 ```sh
-brew tap ldez/homebrew-tap
 
-brew install ldez/tap/prm
+brew tap ldez/tap
+brew update
+brew install prm
 ```
 
