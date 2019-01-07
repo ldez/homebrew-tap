@@ -4,7 +4,7 @@
 
 [Homebrew Taps](https://docs.brew.sh/Taps)
 
-Homebrew Formulae to [PRM](https://github.com/ldez/prm) binaries, powered by @goreleaser
+Homebrew Formulae to [PRM](https://github.com/ldez/prm) binaries.
 
 ```sh
 
