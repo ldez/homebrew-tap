@@ -21,3 +21,11 @@ brew tap ldez/tap
 brew update
 brew install motoko
 ```
+
+- [gcg](https://github.com/ldez/gcg) binaries.
+
+```sh
+brew tap ldez/tap
+brew update
+brew install gcg
+```
