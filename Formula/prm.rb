@@ -2,9 +2,15 @@
 class Prm < Formula
   desc "Pull Request Manager for Maintainers"
   homepage "https://github.com/ldez/prm"
-  url "https://github.com/ldez/prm/releases/download/v2.5.1/prm_v2.5.1_darwin_amd64.tar.gz"
-  version "2.5.1"
-  sha256 "cba6099707184194e179b8ca4fc32b9c47d30c5a98e3759f7e5952702e73fb3e"
+  version "2.6.0"
+
+  if OS.mac?
+    url "https://github.com/ldez/prm/releases/download/v2.6.0/prm_v2.6.0_darwin_amd64.tar.gz"
+    sha256 "9859a009244e7f8e58c27d2e1e4a2fcd2f979c7a605c6126d7cc32eb2d8cc91d"
+  elsif OS.linux?
+    url "https://github.com/ldez/prm/releases/download/v2.6.0/prm_v2.6.0_linux_amd64.tar.gz"
+    sha256 "3b0a61c0efbbe5e9d8cfb3fa5548d58dc64e02e05dc5e0a9a456b78327bdcb6c"
+  end
 
   def install
     bin.install "prm"
