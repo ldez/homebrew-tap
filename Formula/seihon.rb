@@ -2,9 +2,18 @@
 class Seihon < Formula
   desc "A simple tool to publish multi-arch images on the Docker Hub."
   homepage "https://github.com/ldez/seihon"
-  url "https://github.com/ldez/seihon/releases/download/v0.4.2/seihon_v0.4.2_darwin_amd64.tar.gz"
-  version "0.4.2"
-  sha256 "7b25a6518b19b90447db27296e2602e4c2fe2c110e7603c08f937f5ad52f3575"
+  version "0.4.3"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/ldez/seihon/releases/download/v0.4.3/seihon_v0.4.3_darwin_amd64.tar.gz"
+    sha256 "0240e4c7491131aa142b6d8955a77d3258cb1d44758e7187dfacf0812151e52a"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/seihon/releases/download/v0.4.3/seihon_v0.4.3_linux_amd64.tar.gz"
+      sha256 "189435482cc22fc3072f377547063b5cf8c860747513826a8e2a1d9f51722ed0"
+    end
+  end
 
   def install
     bin.install "seihon"
