@@ -2,9 +2,18 @@
 class Gcg < Formula
   desc "GitHub Changelog Generator"
   homepage "https://github.com/ldez/gcg"
-  url "https://github.com/ldez/gcg/releases/download/v1.7.2/gcg_v1.7.2_darwin_amd64.tar.gz"
-  version "1.7.2"
-  sha256 "a83cba0b7c8f8897a4dadcf66ee407d595072593ee35483f3ee35fa885b11095"
+  version "1.7.3"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/ldez/gcg/releases/download/v1.7.3/gcg_v1.7.3_darwin_amd64.tar.gz"
+    sha256 "6d0bc0586f298df0a70adeaf96a436d896351dc477828ee61ce4fe2ff392ca4e"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/gcg/releases/download/v1.7.3/gcg_v1.7.3_linux_amd64.tar.gz"
+      sha256 "1dd27857204dbe7e77a83f3d1b33dc8daee5377ab273c8bd78db3cc2892a3258"
+    end
+  end
 
   def install
     bin.install "gcg"
