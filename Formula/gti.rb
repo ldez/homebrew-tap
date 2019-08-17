@@ -2,16 +2,16 @@
 class Gti < Formula
   desc "Just a silly git launcher, basically. Inspired by sl."
   homepage "https://github.com/ldez/gti"
-  version "1.2.0"
+  version "1.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ldez/gti/releases/download/v1.2.0/gti_v1.2.0_darwin_amd64.tar.gz"
-    sha256 "99c197001ee9fa9a18733dae72f8b14e3a17cb8cf722abcd8f02355a603f9494"
+    url "https://github.com/ldez/gti/releases/download/v1.3.0/gti_v1.3.0_darwin_amd64.tar.gz"
+    sha256 "8983fa378812ed50451e412eb4ef2b38780727c50abab8e9b4635e87d20d3ee3"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/gti/releases/download/v1.2.0/gti_v1.2.0_linux_amd64.tar.gz"
-      sha256 "2ba955bb07ced5ac8704b822532efd7f195cb006b1d1cbf1b80dc0e793603792"
+      url "https://github.com/ldez/gti/releases/download/v1.3.0/gti_v1.3.0_linux_amd64.tar.gz"
+      sha256 "2580715ecffea6c27df9e9f98d2a873c6186467720f48db1836a757ed09710e3"
     end
   end
 
