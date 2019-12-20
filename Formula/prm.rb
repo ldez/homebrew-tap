@@ -2,14 +2,24 @@
 class Prm < Formula
   desc "Pull Request Manager for Maintainers"
   homepage "https://github.com/ldez/prm"
-  version "2.6.1"
+  version "2.7.0"
+  bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ldez/prm/releases/download/v2.6.1/prm_v2.6.1_darwin_amd64.tar.gz"
-    sha256 "525af20590dab6fbeb85a6bb0ee63ffff83cac71dc7ba6558e9b670b3590ecdb"
+    url "https://github.com/ldez/prm/releases/download/v2.7.0/prm_v2.7.0_darwin_amd64.tar.gz"
+    sha256 "39310ee593575ec82464a61e76681e652bf160de41eb54ba99381a0162c3c8e8"
   elsif OS.linux?
-    url "https://github.com/ldez/prm/releases/download/v2.6.1/prm_v2.6.1_linux_amd64.tar.gz"
-    sha256 "daadf04b5609e3a64e2815c0116bcfe9bf16ce9e0c616444f19e5bb783f41aff"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/prm/releases/download/v2.7.0/prm_v2.7.0_linux_amd64.tar.gz"
+      sha256 "2f697313e6424797eb1e07240ff4bdb4e1800ae46614e31c522d16b50d9bb283"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ldez/prm/releases/download/v2.7.0/prm_v2.7.0_linux_arm64.tar.gz"
+        sha256 "f3ffa075f0a474443ff906ff4e194d46b2c937bc96de956c6fbd2d73155e8b70"
+      else
+      end
+    end
   end
 
   def install
