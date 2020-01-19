@@ -18,4 +18,8 @@ class Gti < Formula
   def install
     bin.install "gti"
   end
+  
+  test do
+    system "echo 0"
+  end
 end
