@@ -27,6 +27,6 @@ class Prm < Formula
   end
 
   test do
-    system "#{bin}/prm version"
+    system "#{bin}/prm --version"
   end
 end
