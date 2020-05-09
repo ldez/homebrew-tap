@@ -1,5 +1,5 @@
 class Motoko < Formula
-  desc "Based on Go modules, update a dependency to a major version."
+  desc "Based on Go modules, update a dependency to a major version"
   homepage "https://github.com/ldez/motoko"
   url "https://github.com/ldez/motoko/releases/download/v0.1.1/motoko_v0.1.1_darwin_amd64.tar.gz"
   version "0.1.1"

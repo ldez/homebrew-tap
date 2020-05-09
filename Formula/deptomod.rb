@@ -17,7 +17,6 @@ class Deptomod < Formula
       if Hardware::CPU.is_64_bit?
         url "https://github.com/ldez/deptomod/releases/download/v0.1.0/deptomod_v0.1.0_linux_arm64.tar.gz"
         sha256 "aa7b6ab4329f2971ca3a38766caac5ac953888cb510c744af83a693cb7d27adf"
-      else
       end
     end
   end
