@@ -2,21 +2,22 @@
 class Prm < Formula
   desc "Pull Request Manager for Maintainers"
   homepage "https://github.com/ldez/prm"
-  version "3.3.0"
+  version "3.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ldez/prm/releases/download/v3.3.0/prm_v3.3.0_darwin_amd64.tar.gz"
-    sha256 "3ff4614a7e6dea876e76bfbcf6118493161d5f4fc916365745277e955e0ef175"
+    url "https://github.com/ldez/prm/releases/download/v3.4.0/prm_v3.4.0_darwin_amd64.tar.gz"
+    sha256 "1214f8da1d6b24aec12ee8ee9f619161e25b664d838f08450b6895730dc20c70"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/prm/releases/download/v3.3.0/prm_v3.3.0_linux_amd64.tar.gz"
-      sha256 "88acc06ceafe8b462a0ed26c41d4dcc5a73ba55fb5dbdff94ff6e2641626159c"
+      url "https://github.com/ldez/prm/releases/download/v3.4.0/prm_v3.4.0_linux_amd64.tar.gz"
+      sha256 "ec3cc513bd7a8d22a6518392bf00e90289981a63500f3a36240749a95dfb7e74"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/prm/releases/download/v3.3.0/prm_v3.3.0_linux_arm64.tar.gz"
-        sha256 "a99dbd0604adf0c8a1f0d4f1ecdc8aed2405b916aa82fb00571a89e00ff88a06"
+        url "https://github.com/ldez/prm/releases/download/v3.4.0/prm_v3.4.0_linux_arm64.tar.gz"
+        sha256 "a0dff619632331107c6ad6621f1989092a38a546aad85ed7ed926c75d56e3440"
+      else
       end
     end
   end
