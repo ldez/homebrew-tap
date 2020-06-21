@@ -17,7 +17,6 @@ class Prm < Formula
       if Hardware::CPU.is_64_bit?
         url "https://github.com/ldez/prm/releases/download/v3.4.0/prm_v3.4.0_linux_arm64.tar.gz"
         sha256 "a0dff619632331107c6ad6621f1989092a38a546aad85ed7ed926c75d56e3440"
-      else
       end
     end
   end
