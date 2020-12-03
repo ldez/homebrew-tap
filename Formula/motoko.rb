@@ -2,26 +2,24 @@
 class Motoko < Formula
   desc "Based on Go modules, update a dependency to a major version"
   homepage "https://github.com/ldez/motoko"
-  version "0.2.1"
+  version "0.2.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ldez/motoko/releases/download/v0.2.1/motoko_v0.2.1_darwin_amd64.tar.gz"
-    sha256 "644c7bdb74d6b7b543fe4c7b935faad415dd15de6e4b62aa1f8193f483f5cb6f"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.1/motoko_v0.2.1_linux_amd64.tar.gz"
-      sha256 "b910d41eac5164ea97ea58538ddee852895a3f5d2877ffdfce3db1e78a7c3be6"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/motoko/releases/download/v0.2.1/motoko_v0.2.1_linux_arm64.tar.gz"
-        sha256 "a732e416fc63373438df125e7e3184616ec6506c42269316772440cb65d87cd7"
-      else
-        url "https://github.com/ldez/motoko/releases/download/v0.2.1/motoko_v0.2.1_linux_armv6.tar.gz"
-        sha256 "f5bb14d0d6ecceea83ab26e3dea69e51e9edd1b2c6234d0b254a100c0e304a60"
-      end
-    end
+    url "https://github.com/ldez/motoko/releases/download/v0.2.2/motoko_v0.2.2_darwin_amd64.tar.gz"
+    sha256 "69047cd7c6425c40d7c7f7c246a9cbd007e2ae8d641416b6a16c09743cdd64d5"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/ldez/motoko/releases/download/v0.2.2/motoko_v0.2.2_linux_amd64.tar.gz"
+    sha256 "8890081eb46f4ce7ef7093c4917780385ae2d44549eec50ce19ba24accc42f2c"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/ldez/motoko/releases/download/v0.2.2/motoko_v0.2.2_linux_armv6.tar.gz"
+    sha256 "27a755839727c9fa3a92c0c77edf61b4dee8eb26aa050e4025deec769b3bcef2"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/ldez/motoko/releases/download/v0.2.2/motoko_v0.2.2_linux_arm64.tar.gz"
+    sha256 "3625f072ec82e8b44040fc08755339fa9dd4a606f70019498ce5d1704c620c09"
   end
 
   def install
