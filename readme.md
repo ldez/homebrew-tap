@@ -1,6 +1,6 @@
-# homebrew-tap 
+# homebrew-tap
 
-[![Build Status](https://travis-ci.com/ldez/homebrew-tap.svg?branch=master)](https://travis-ci.com/ldez/homebrew-tap)
+[![Build Status](https://github.com/ldez/homebrew-tap/workflows/Homebrew%20Tap/badge.svg)](https://github.com/ldez/homebrew-tap/actions)
 
 [Homebrew Taps](https://docs.brew.sh/Taps)
 
