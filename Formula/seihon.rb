@@ -5,16 +5,24 @@
 class Seihon < Formula
   desc "Simple tool to publish multi-arch images on the Docker Hub"
   homepage "https://github.com/ldez/seihon"
-  version "0.8.2"
+  version "0.8.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ldez/seihon/releases/download/v0.8.2/seihon_v0.8.2_darwin_amd64.tar.gz"
-    sha256 "cf2c3e14dd21c17bd7843718d1765413110e53f8c9478a29e4a452d7336182ff"
+    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_darwin_amd64.tar.gz"
+    sha256 "73ad7581753ad10ea2fa531ec0f710e2ab0d508bb9d3d4a852c68a4c15d2fa42"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_darwin_arm64.tar.gz"
+    sha256 "8ae27428b307f114d5ad1bf68c66b6492562180734d85fe1295fd01a2c7548ae"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ldez/seihon/releases/download/v0.8.2/seihon_v0.8.2_linux_amd64.tar.gz"
-    sha256 "bcf75635c15e037067c2501487abfcc6b30cf089d0fbdd6c6a3745ab1d62ade9"
+    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_linux_amd64.tar.gz"
+    sha256 "4c257c6304359918a087b0fba2c04a686e7337ea9ce6763bebfaccd45ebaca04"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_linux_arm64.tar.gz"
+    sha256 "485078b324bd1a26adb8490c4b3ff66e09b9b8fe00a24d3fce6f6153ae54fcb8"
   end
 
   def install
