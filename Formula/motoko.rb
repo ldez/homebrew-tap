@@ -5,32 +5,32 @@
 class Motoko < Formula
   desc "Based on Go modules, update a dependency to a major version"
   homepage "https://github.com/ldez/motoko"
-  version "0.2.5"
+  version "0.2.6"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.5/motoko_v0.2.5_darwin_amd64.tar.gz"
-      sha256 "2f99b507f922f2b14c394ddfcf1b80b9aecb105b1f27487c9326cc132ebe8f71"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_darwin_amd64.tar.gz"
+      sha256 "1740c53eb0b4c9dbaee0f60850be3718429a26c98e076ecf02c66c7b2b86b3fa"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.5/motoko_v0.2.5_darwin_arm64.tar.gz"
-      sha256 "d5b4dbf88d7cbcbee7a76caa287391dea75bc30a7e2fcd3638f39b1e827b98f4"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_darwin_arm64.tar.gz"
+      sha256 "6e3ad05e3f797bc3231b261257aee92ce4c743d5e01f71975fafc504f8e21478"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.5/motoko_v0.2.5_linux_amd64.tar.gz"
-      sha256 "fe34749c17e94cd3555ea65ed4173eacc3017cd00c76ddd8f8f00e6387230afa"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_linux_amd64.tar.gz"
+      sha256 "8b24710f277662ed9ab06acf094291ac2bd989469aaacd831b1e98b8c7c16dbb"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.5/motoko_v0.2.5_linux_armv6.tar.gz"
-      sha256 "2baa8981ed9d4b1e37722e75b2fcae04a11c3e48895cc8fbca53920b1f06ad1e"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_linux_armv6.tar.gz"
+      sha256 "220b7a510dbe58d152d6ef255aec7e7c37c9b95bf0807feb41bbd8cf5bdb6d36"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.5/motoko_v0.2.5_linux_arm64.tar.gz"
-      sha256 "8dcd7c323acb186d69a050121dcebec6b7e257e35a24c072cf7cb8a906d5a6a3"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_linux_arm64.tar.gz"
+      sha256 "7fdd13ce98a6095e4019fedabd552bc727309c778ef20e12675ce25a3ed36358"
     end
   end
 
