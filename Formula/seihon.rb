@@ -5,24 +5,29 @@
 class Seihon < Formula
   desc "Simple tool to publish multi-arch images on the Docker Hub"
   homepage "https://github.com/ldez/seihon"
-  version "0.8.3"
+  version "0.8.4"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_darwin_amd64.tar.gz"
-    sha256 "73ad7581753ad10ea2fa531ec0f710e2ab0d508bb9d3d4a852c68a4c15d2fa42"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_darwin_amd64.tar.gz"
+      sha256 "fd4893a36ad56422476819d52e8f5dcf1eb921ad3505a4db39edfcc46266aa13"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_darwin_arm64.tar.gz"
+      sha256 "e183bac1d18aaf7f0fccd58b26d1b0fac62c556bf2efd0445b0e8acea4b68462"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_darwin_arm64.tar.gz"
-    sha256 "8ae27428b307f114d5ad1bf68c66b6492562180734d85fe1295fd01a2c7548ae"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_linux_amd64.tar.gz"
-    sha256 "4c257c6304359918a087b0fba2c04a686e7337ea9ce6763bebfaccd45ebaca04"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ldez/seihon/releases/download/v0.8.3/seihon_v0.8.3_linux_arm64.tar.gz"
-    sha256 "485078b324bd1a26adb8490c4b3ff66e09b9b8fe00a24d3fce6f6153ae54fcb8"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_linux_amd64.tar.gz"
+      sha256 "272b82cb8640406b4a4553f8ad795a6fea55dac605bd5ac44af8bd3af2ba5d26"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_linux_arm64.tar.gz"
+      sha256 "3cd9ee8b944da5d71f899db4c2b09173da1f594d2b8997b5f0ce92cbb6da8ccf"
+    end
   end
 
   def install
