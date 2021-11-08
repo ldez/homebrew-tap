@@ -5,33 +5,44 @@
 class Seihon < Formula
   desc "Simple tool to publish multi-arch images on the Docker Hub"
   homepage "https://github.com/ldez/seihon"
-  version "0.8.4"
-  bottle :unneeded
+  version "0.8.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_darwin_amd64.tar.gz"
-      sha256 "fd4893a36ad56422476819d52e8f5dcf1eb921ad3505a4db39edfcc46266aa13"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_darwin_arm64.tar.gz"
-      sha256 "e183bac1d18aaf7f0fccd58b26d1b0fac62c556bf2efd0445b0e8acea4b68462"
+      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_darwin_arm64.tar.gz"
+      sha256 "37565fe6650e2fee24c809a585a2a66ca6f0690fba57a4eecd97dbc2568d000f"
+
+      def install
+        bin.install "seihon"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_darwin_amd64.tar.gz"
+      sha256 "624949102a2d36cb897f5dd682b946717eb5f2025a16db991685c10f45191eea"
+
+      def install
+        bin.install "seihon"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_linux_amd64.tar.gz"
-      sha256 "272b82cb8640406b4a4553f8ad795a6fea55dac605bd5ac44af8bd3af2ba5d26"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.4/seihon_v0.8.4_linux_arm64.tar.gz"
-      sha256 "3cd9ee8b944da5d71f899db4c2b09173da1f594d2b8997b5f0ce92cbb6da8ccf"
-    end
-  end
+      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_linux_arm64.tar.gz"
+      sha256 "5d95eaf01d4a421a70b78cfec58299688acd2f99fc7901dce89f05e5e306bfd8"
 
-  def install
-    bin.install "seihon"
+      def install
+        bin.install "seihon"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_linux_amd64.tar.gz"
+      sha256 "7d7b8865fc99e7f066f2e59aaf397a829c76d286bcde2b4e0fdd9c7a1b2d4bdf"
+
+      def install
+        bin.install "seihon"
+      end
+    end
   end
 
   test do
