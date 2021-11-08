@@ -5,33 +5,44 @@
 class Prm < Formula
   desc "Pull Request Manager for Maintainers"
   homepage "https://github.com/ldez/prm"
-  version "3.4.4"
-  bottle :unneeded
+  version "3.4.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/prm/releases/download/v3.4.4/prm_v3.4.4_darwin_amd64.tar.gz"
-      sha256 "ec2594b7992762bea70fdc65113f944c13e75c464ebd8294147ddb1b4b4aab55"
+      url "https://github.com/ldez/prm/releases/download/v3.4.5/prm_v3.4.5_darwin_amd64.tar.gz"
+      sha256 "e39384f89198288815b502800a3a39f999d41a8ffffc74b2af0af22bf2300e57"
+
+      def install
+        bin.install "prm"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ldez/prm/releases/download/v3.4.4/prm_v3.4.4_darwin_arm64.tar.gz"
-      sha256 "7fc898016986f4bbb77793bafa1944e3adb32baa8a98863a223b0236d395e00e"
+      url "https://github.com/ldez/prm/releases/download/v3.4.5/prm_v3.4.5_darwin_arm64.tar.gz"
+      sha256 "294399ab72d8338131d985a5ff64707622d45c2e2c6e9c90cfaa79920ab597f5"
+
+      def install
+        bin.install "prm"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/prm/releases/download/v3.4.4/prm_v3.4.4_linux_amd64.tar.gz"
-      sha256 "5ddee6468c4d68e03810a397c5fb29dc85ccdff338c68a6f3028e0ee2c2307b9"
+      url "https://github.com/ldez/prm/releases/download/v3.4.5/prm_v3.4.5_linux_amd64.tar.gz"
+      sha256 "11b75c1b607d9aa071b5703a9ed5a5f02f9e226043a8fe489991ea338de967f9"
+
+      def install
+        bin.install "prm"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/prm/releases/download/v3.4.4/prm_v3.4.4_linux_arm64.tar.gz"
-      sha256 "de22d54bc29b45dd6acf4a5d22f6b669905355bba20f0042bc2517c6dc18c0a9"
-    end
-  end
+      url "https://github.com/ldez/prm/releases/download/v3.4.5/prm_v3.4.5_linux_arm64.tar.gz"
+      sha256 "9e37f345836847e9ba4d44d8d6de96bd35d56bee048e4d3648ee3b1ea800d79c"
 
-  def install
-    bin.install "prm"
+      def install
+        bin.install "prm"
+      end
+    end
   end
 
   test do
