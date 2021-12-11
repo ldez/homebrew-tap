@@ -5,20 +5,20 @@
 class Seihon < Formula
   desc "Simple tool to publish multi-arch images on the Docker Hub"
   homepage "https://github.com/ldez/seihon"
-  version "0.8.5"
+  version "0.9.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_darwin_arm64.tar.gz"
-      sha256 "37565fe6650e2fee24c809a585a2a66ca6f0690fba57a4eecd97dbc2568d000f"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/seihon/releases/download/v0.9.0/seihon_v0.9.0_darwin_amd64.tar.gz"
+      sha256 "aa44b39fcd885242c1ce91420d51ec90203a6948de5ede01cf8a9b5bfd165f72"
 
       def install
         bin.install "seihon"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_darwin_amd64.tar.gz"
-      sha256 "624949102a2d36cb897f5dd682b946717eb5f2025a16db991685c10f45191eea"
+    if Hardware::CPU.arm?
+      url "https://github.com/ldez/seihon/releases/download/v0.9.0/seihon_v0.9.0_darwin_arm64.tar.gz"
+      sha256 "231ef1f5d69706b3caf99a041909a240395f3355886eb80992bee18158db8cb7"
 
       def install
         bin.install "seihon"
@@ -28,16 +28,16 @@ class Seihon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_linux_arm64.tar.gz"
-      sha256 "5d95eaf01d4a421a70b78cfec58299688acd2f99fc7901dce89f05e5e306bfd8"
+      url "https://github.com/ldez/seihon/releases/download/v0.9.0/seihon_v0.9.0_linux_arm64.tar.gz"
+      sha256 "981c7f720c7c7818054a68500dbfee54c81d63b53bae8d7a9f0d3995f2ebcd59"
 
       def install
         bin.install "seihon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/seihon/releases/download/v0.8.5/seihon_v0.8.5_linux_amd64.tar.gz"
-      sha256 "7d7b8865fc99e7f066f2e59aaf397a829c76d286bcde2b4e0fdd9c7a1b2d4bdf"
+      url "https://github.com/ldez/seihon/releases/download/v0.9.0/seihon_v0.9.0_linux_amd64.tar.gz"
+      sha256 "f9af92cb30d9b2a99f1515953a4cc692d41d9d6030a9a67c72df14b754e25d2a"
 
       def install
         bin.install "seihon"
