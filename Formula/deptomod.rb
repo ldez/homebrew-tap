@@ -3,7 +3,6 @@ class Deptomod < Formula
   desc "Enhanced migration from dep to go modules"
   homepage "https://github.com/ldez/deptomod"
   version "0.1.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/ldez/deptomod/releases/download/v0.1.0/deptomod_v0.1.0_darwin_amd64.tar.gz"

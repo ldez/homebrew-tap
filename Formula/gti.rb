@@ -3,7 +3,6 @@ class Gti < Formula
   desc "Just a silly git launcher, basically. Inspired by sl"
   homepage "https://github.com/ldez/gti"
   version "1.5.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/ldez/gti/releases/download/v1.5.0/gti_v1.5.0_darwin_amd64.tar.gz"
