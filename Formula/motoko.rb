@@ -6,7 +6,6 @@ class Motoko < Formula
   desc "Based on Go modules, update a dependency to a major version"
   homepage "https://github.com/ldez/motoko"
   version "0.2.6"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
