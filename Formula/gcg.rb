@@ -5,20 +5,20 @@
 class Gcg < Formula
   desc "GitHub Changelog Generator"
   homepage "https://github.com/ldez/gcg"
-  version "1.7.5"
+  version "1.7.8"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.5/gcg_v1.7.5_darwin_amd64.tar.gz"
-      sha256 "2e0f546a117425a8f0f02ed2fd1a90972cb1b36f2eb57bf461f87c54a8a85090"
+    if Hardware::CPU.arm?
+      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_darwin_arm64.tar.gz"
+      sha256 "99b1bcee02ed361198c03946520592ebf78cdb5cacb10c2f50950e3ea511b23f"
 
       def install
         bin.install "gcg"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.5/gcg_v1.7.5_darwin_arm64.tar.gz"
-      sha256 "c7d4ed2d01c3cc334ebcbd5120f7740730947ce5de1340b6d1bf2906da48bb3b"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_darwin_amd64.tar.gz"
+      sha256 "55d13c0598030d09fd5260e8100f88c467a9844c067c7af03dee8cb2241d714c"
 
       def install
         bin.install "gcg"
@@ -27,17 +27,17 @@ class Gcg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.5/gcg_v1.7.5_linux_arm64.tar.gz"
-      sha256 "55f87453f1cd96cffda9aeebd5fec1efa9b732aa1f4f9c35f1ac88fa94e5451d"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_linux_amd64.tar.gz"
+      sha256 "e2cd77550bed8890066e2a0eb6f8ad43f5c4400b7e71bff6b027460a603a3128"
 
       def install
         bin.install "gcg"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.5/gcg_v1.7.5_linux_amd64.tar.gz"
-      sha256 "59150671e60749a5e805dd0983a27409abe5b578c330ec2f5c09d82b5d047d0b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_linux_arm64.tar.gz"
+      sha256 "46d825abba95cb9679f560277da3e7acab059075b89bd105539e19b4bdf1c9a7"
 
       def install
         bin.install "gcg"
