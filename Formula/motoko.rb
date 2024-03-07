@@ -5,36 +5,52 @@
 class Motoko < Formula
   desc "Based on Go modules, update a dependency to a major version"
   homepage "https://github.com/ldez/motoko"
-  version "0.2.6"
+  version "0.2.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_darwin_amd64.tar.gz"
-      sha256 "1740c53eb0b4c9dbaee0f60850be3718429a26c98e076ecf02c66c7b2b86b3fa"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_darwin_arm64.tar.gz"
-      sha256 "6e3ad05e3f797bc3231b261257aee92ce4c743d5e01f71975fafc504f8e21478"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.7/motoko_v0.2.7_darwin_arm64.tar.gz"
+      sha256 "ad7d5971df135f7add55dd87d1955a1f8602c4e1f003bb9b187353f79e2a023d"
+
+      def install
+        bin.install "motoko"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/motoko/releases/download/v0.2.7/motoko_v0.2.7_darwin_amd64.tar.gz"
+      sha256 "6153e77c4749c6028604efdc6bf651ceae206854f47e885f40d9120716cc7d6e"
+
+      def install
+        bin.install "motoko"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_linux_amd64.tar.gz"
-      sha256 "8b24710f277662ed9ab06acf094291ac2bd989469aaacd831b1e98b8c7c16dbb"
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_linux_armv6.tar.gz"
-      sha256 "220b7a510dbe58d152d6ef255aec7e7c37c9b95bf0807feb41bbd8cf5bdb6d36"
+      url "https://github.com/ldez/motoko/releases/download/v0.2.7/motoko_v0.2.7_linux_amd64.tar.gz"
+      sha256 "ff48aeab901390370a36fc136fc8693a21086632f21106c36064c4e4f247faf2"
+
+      def install
+        bin.install "motoko"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/motoko/releases/download/v0.2.6/motoko_v0.2.6_linux_arm64.tar.gz"
-      sha256 "7fdd13ce98a6095e4019fedabd552bc727309c778ef20e12675ce25a3ed36358"
-    end
-  end
+      url "https://github.com/ldez/motoko/releases/download/v0.2.7/motoko_v0.2.7_linux_arm64.tar.gz"
+      sha256 "f53d8b1d7a4693f11fdd15c3cc8792772658be5cb7f33cc03c141ecad2c24a9c"
 
-  def install
-    bin.install "motoko"
+      def install
+        bin.install "motoko"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ldez/motoko/releases/download/v0.2.7/motoko_v0.2.7_linux_armv6.tar.gz"
+      sha256 "cc0d62ccf61114fcc679d003c2b002454453d31d64cd87f636bc502ece1d1b0c"
+
+      def install
+        bin.install "motoko"
+      end
+    end
   end
 
   test do
