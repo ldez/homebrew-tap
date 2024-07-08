@@ -5,20 +5,20 @@
 class Distributarepo < Formula
   desc "Helper to get an overview of the forks of a GitHub repository"
   homepage "https://github.com/ldez/distributarepo"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/ldez/distributarepo/releases/download/v0.1.1/distributarepo_v0.1.1_darwin_amd64.tar.gz"
-      sha256 "99359b03dd66a46dc13c8be6e458849dd962af4526b443340a537804a04f1bbb"
+      url "https://github.com/ldez/distributarepo/releases/download/v0.2.0/distributarepo_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "28ef0530c05b4824b444e790009901e905fc223796bcd54eb36ea2fc06f7e6aa"
 
       def install
         bin.install "distributarepo"
       end
     end
     on_arm do
-      url "https://github.com/ldez/distributarepo/releases/download/v0.1.1/distributarepo_v0.1.1_darwin_arm64.tar.gz"
-      sha256 "368c4ad310592b75f4c0fbfe2492a70fcad3e67f43d23651464e00f80925a3ff"
+      url "https://github.com/ldez/distributarepo/releases/download/v0.2.0/distributarepo_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "96fe69997daa70fffa4b6dbcb6d1185ef1ef23716225581d390d24c158fc724c"
 
       def install
         bin.install "distributarepo"
@@ -29,8 +29,8 @@ class Distributarepo < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/distributarepo/releases/download/v0.1.1/distributarepo_v0.1.1_linux_amd64.tar.gz"
-        sha256 "0e7b13892167cd12c712fac462e29eaeb7614af3bf1188a13570963785d17dd4"
+        url "https://github.com/ldez/distributarepo/releases/download/v0.2.0/distributarepo_v0.2.0_linux_amd64.tar.gz"
+        sha256 "35e9f5e196c0b3342665d7be9430c8d1fd1f348c54674ab02e56489608badb0a"
 
         def install
           bin.install "distributarepo"
@@ -39,8 +39,8 @@ class Distributarepo < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/distributarepo/releases/download/v0.1.1/distributarepo_v0.1.1_linux_armv6.tar.gz"
-        sha256 "81f2147e0d04880675ac202dea2b0b991d99a95d1709d2a05c1e81f2e06f73e3"
+        url "https://github.com/ldez/distributarepo/releases/download/v0.2.0/distributarepo_v0.2.0_linux_armv6.tar.gz"
+        sha256 "bee4dfe3d7e1dc3c210985e804851de0cf224e4e9fb4d9de0fc8423d06512f58"
 
         def install
           bin.install "distributarepo"
@@ -49,8 +49,8 @@ class Distributarepo < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/distributarepo/releases/download/v0.1.1/distributarepo_v0.1.1_linux_arm64.tar.gz"
-        sha256 "96c200902410a354f069caaca42e2ef108669ff5094c9cbd8bf48ae228701dbc"
+        url "https://github.com/ldez/distributarepo/releases/download/v0.2.0/distributarepo_v0.2.0_linux_arm64.tar.gz"
+        sha256 "609ef17a89e1b61a3a3f6c502281cd1caf9439b6bf93fef96464c9c6b637b24d"
 
         def install
           bin.install "distributarepo"
