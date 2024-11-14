@@ -10,7 +10,7 @@ class Gcg < Formula
   on_macos do
     on_intel do
       url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_darwin_amd64.tar.gz"
-      sha256 "2f9180a5ee4dca9be8cc1b73d91f7f08500ffdd6fee05db9a33e541d2a853ac0"
+      sha256 "cf5a334e57c42cbb1dd90b8648b90dfdab3b28269e50e64a134d6f14b1dd849e"
 
       def install
         bin.install "gcg"
@@ -18,7 +18,7 @@ class Gcg < Formula
     end
     on_arm do
       url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_darwin_arm64.tar.gz"
-      sha256 "26966343759c945843f8de9839bf238dc8140004e4547377e32b0f25a0bb5fd6"
+      sha256 "0ddc7c50912da42701be5861072d09ad93e40631ae824cc872944d6515fca565"
 
       def install
         bin.install "gcg"
@@ -30,7 +30,7 @@ class Gcg < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_linux_amd64.tar.gz"
-        sha256 "a9d31e8c20456fcc27dd20043d09d428e50a68f6c83f4943f9012c9953a67291"
+        sha256 "3ef182aae65386ec12a7b90878e3f1152f93add7a1eef972d5f3ced9b3f23109"
 
         def install
           bin.install "gcg"
@@ -40,7 +40,7 @@ class Gcg < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_linux_arm64.tar.gz"
-        sha256 "ccbaf78271c7a12899b5cd67a44ad12ded4f6fa068fef4a3d47f25ca17bbb120"
+        sha256 "d63cb6a403a662802a791703bf6cbbcc7905f686b9ab5845487813bd3aa1b0b3"
 
         def install
           bin.install "gcg"
