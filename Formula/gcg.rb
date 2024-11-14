@@ -5,20 +5,20 @@
 class Gcg < Formula
   desc "GitHub Changelog Generator"
   homepage "https://github.com/ldez/gcg"
-  version "1.7.10"
+  version "1.7.11"
 
   on_macos do
     on_intel do
-      url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_darwin_amd64.tar.gz"
-      sha256 "cf5a334e57c42cbb1dd90b8648b90dfdab3b28269e50e64a134d6f14b1dd849e"
+      url "https://github.com/ldez/gcg/releases/download/v1.7.11/gcg_v1.7.11_darwin_amd64.tar.gz"
+      sha256 "09c9151122453ebd63928d6d9b994a14ff85a9f58925190e75981fa3be38554c"
 
       def install
         bin.install "gcg"
       end
     end
     on_arm do
-      url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_darwin_arm64.tar.gz"
-      sha256 "0ddc7c50912da42701be5861072d09ad93e40631ae824cc872944d6515fca565"
+      url "https://github.com/ldez/gcg/releases/download/v1.7.11/gcg_v1.7.11_darwin_arm64.tar.gz"
+      sha256 "d3ee048feee287c7706866d30d50d6710a7ceb31f0ce3849f96907b78a910e00"
 
       def install
         bin.install "gcg"
@@ -29,8 +29,8 @@ class Gcg < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_linux_amd64.tar.gz"
-        sha256 "3ef182aae65386ec12a7b90878e3f1152f93add7a1eef972d5f3ced9b3f23109"
+        url "https://github.com/ldez/gcg/releases/download/v1.7.11/gcg_v1.7.11_linux_amd64.tar.gz"
+        sha256 "7d9d29e0781b6c7b5384ce766315333de8d735acb57b8620bb01d50650bd8d04"
 
         def install
           bin.install "gcg"
@@ -39,8 +39,8 @@ class Gcg < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/gcg/releases/download/v1.7.10/gcg_v1.7.10_linux_arm64.tar.gz"
-        sha256 "d63cb6a403a662802a791703bf6cbbcc7905f686b9ab5845487813bd3aa1b0b3"
+        url "https://github.com/ldez/gcg/releases/download/v1.7.11/gcg_v1.7.11_linux_arm64.tar.gz"
+        sha256 "330e99a5080049f279dd0d4507e5df851c65ed81b4d7f6f5c857126441e6a282"
 
         def install
           bin.install "gcg"
