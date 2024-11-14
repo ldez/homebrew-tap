@@ -5,20 +5,20 @@
 class Gcg < Formula
   desc "GitHub Changelog Generator"
   homepage "https://github.com/ldez/gcg"
-  version "1.7.8"
+  version "1.7.9"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_darwin_arm64.tar.gz"
-      sha256 "99b1bcee02ed361198c03946520592ebf78cdb5cacb10c2f50950e3ea511b23f"
+    on_intel do
+      url "https://github.com/ldez/gcg/releases/download/v1.7.9/gcg_v1.7.9_darwin_amd64.tar.gz"
+      sha256 "34dbaf62b3a7c1d2cff785d020cf0abcf36e60867924fe97f8fb9e0c5e7331ee"
 
       def install
         bin.install "gcg"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_darwin_amd64.tar.gz"
-      sha256 "55d13c0598030d09fd5260e8100f88c467a9844c067c7af03dee8cb2241d714c"
+    on_arm do
+      url "https://github.com/ldez/gcg/releases/download/v1.7.9/gcg_v1.7.9_darwin_arm64.tar.gz"
+      sha256 "8eaef520772ad799646f5f23d6b1300886780e12e40d4a8308e98b398746ba6d"
 
       def install
         bin.install "gcg"
@@ -27,20 +27,24 @@ class Gcg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_linux_amd64.tar.gz"
-      sha256 "e2cd77550bed8890066e2a0eb6f8ad43f5c4400b7e71bff6b027460a603a3128"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ldez/gcg/releases/download/v1.7.9/gcg_v1.7.9_linux_amd64.tar.gz"
+        sha256 "9c19c7250d32da52dab2e45a5873f8084fe3c22e90e4d52fbcb18c36025c5452"
 
-      def install
-        bin.install "gcg"
+        def install
+          bin.install "gcg"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ldez/gcg/releases/download/v1.7.8/gcg_v1.7.8_linux_arm64.tar.gz"
-      sha256 "46d825abba95cb9679f560277da3e7acab059075b89bd105539e19b4bdf1c9a7"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ldez/gcg/releases/download/v1.7.9/gcg_v1.7.9_linux_arm64.tar.gz"
+        sha256 "3bce07486093cd1a2d640c1cb95334722e5df5c4a6c30086ed0bd8d202d56f05"
 
-      def install
-        bin.install "gcg"
+        def install
+          bin.install "gcg"
+        end
       end
     end
   end
