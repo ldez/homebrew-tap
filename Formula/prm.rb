@@ -5,20 +5,20 @@
 class Prm < Formula
   desc "Pull Request Manager for Maintainers"
   homepage "https://github.com/ldez/prm"
-  version "3.6.0"
+  version "3.6.2"
 
   on_macos do
-    on_intel do
-      url "https://github.com/ldez/prm/releases/download/v3.6.0/prm_v3.6.0_darwin_amd64.tar.gz"
-      sha256 "afc182f3553cc413efbb6ed21bedee47b9cb60665d101269de64595cad0a3bb9"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_darwin_amd64.tar.gz"
+      sha256 "15e0cb71b1f337643ce8f2a55fa85f2275c69b4a063a79787d0ee32d8fc473a0"
 
       def install
         bin.install "prm"
       end
     end
-    on_arm do
-      url "https://github.com/ldez/prm/releases/download/v3.6.0/prm_v3.6.0_darwin_arm64.tar.gz"
-      sha256 "7c15524fa0c15de643fa0094fe1ec3e57a3da2a89fbb2155f7b7f21afba26b0e"
+    if Hardware::CPU.arm?
+      url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_darwin_arm64.tar.gz"
+      sha256 "4c3e14c6ee39deb36be35b91b129a5fc2652af4a3a8e93b5896f1180f299fcc2"
 
       def install
         bin.install "prm"
@@ -27,20 +27,20 @@ class Prm < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/prm/releases/download/v3.6.0/prm_v3.6.0_linux_amd64.tar.gz"
-        sha256 "1b914aa1e9e50934c05ce07331d1bcc98387b55c47f242b43645c6a1201a4518"
+        url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_linux_amd64.tar.gz"
+        sha256 "37375377adfddee121e857447db52a20c0867233f2cd61963e7b9d56d97d46ce"
 
         def install
           bin.install "prm"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/prm/releases/download/v3.6.0/prm_v3.6.0_linux_arm64.tar.gz"
-        sha256 "a5ca9998ef193bf0a3ca6040f49553e8440bedc894072292de1d5ffa616bbc67"
+        url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_linux_arm64.tar.gz"
+        sha256 "1e37c3af0dd04c218eeab891551af502961b7580827d3a79b24f5f7ff13297f6"
 
         def install
           bin.install "prm"
