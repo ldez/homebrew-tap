@@ -5,20 +5,20 @@
 class Prm < Formula
   desc "Pull Request Manager for Maintainers"
   homepage "https://github.com/ldez/prm"
-  version "3.6.2"
+  version "3.6.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_darwin_amd64.tar.gz"
-      sha256 "15e0cb71b1f337643ce8f2a55fa85f2275c69b4a063a79787d0ee32d8fc473a0"
+      url "https://github.com/ldez/prm/releases/download/v3.6.3/prm_v3.6.3_darwin_amd64.tar.gz"
+      sha256 "e5ab78e81546880a998fd61840cb0c18ef5a1b1459dcd62e06788d7d457c8957"
 
       def install
         bin.install "prm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_darwin_arm64.tar.gz"
-      sha256 "4c3e14c6ee39deb36be35b91b129a5fc2652af4a3a8e93b5896f1180f299fcc2"
+      url "https://github.com/ldez/prm/releases/download/v3.6.3/prm_v3.6.3_darwin_arm64.tar.gz"
+      sha256 "4cf8f380e08ba5ede60157530fa892fc278fb15a1c5bfe1f639a1c923c494d91"
 
       def install
         bin.install "prm"
@@ -29,8 +29,8 @@ class Prm < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_linux_amd64.tar.gz"
-        sha256 "37375377adfddee121e857447db52a20c0867233f2cd61963e7b9d56d97d46ce"
+        url "https://github.com/ldez/prm/releases/download/v3.6.3/prm_v3.6.3_linux_amd64.tar.gz"
+        sha256 "b97f764ff519f2830cd3d8ebdf7a3438e2883c42b9a655257a8ae0a9ee4189c1"
 
         def install
           bin.install "prm"
@@ -39,8 +39,8 @@ class Prm < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/prm/releases/download/v3.6.2/prm_v3.6.2_linux_arm64.tar.gz"
-        sha256 "1e37c3af0dd04c218eeab891551af502961b7580827d3a79b24f5f7ff13297f6"
+        url "https://github.com/ldez/prm/releases/download/v3.6.3/prm_v3.6.3_linux_arm64.tar.gz"
+        sha256 "4843baf3b84ba5f01e767eb162888e028812cdad13e34a496f941f415ba8a642"
 
         def install
           bin.install "prm"
