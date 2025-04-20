@@ -11,7 +11,7 @@ jobs:
 
       # https://github.com/marketplace/actions/checkout
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # See https://brew.sh
       - name: Set up Homebrew
@@ -20,7 +20,7 @@ jobs:
 
       # https://github.com/marketplace/actions/cache
       - name: Cache Bundler RubyGems
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
