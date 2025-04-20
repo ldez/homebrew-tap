@@ -5,20 +5,20 @@
 class Distributarepo < Formula
   desc "Helper to get an overview of the forks of a GitHub repository"
   homepage "https://github.com/ldez/distributarepo"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/ldez/distributarepo/releases/download/v0.3.0/distributarepo_v0.3.0_darwin_amd64.tar.gz"
-      sha256 "6945a4554a9d0fdf01a6d4b329097e44372eff3d342f10d86805c58a4ad4029a"
+    if Hardware::CPU.intel?
+      url "https://github.com/ldez/distributarepo/releases/download/v0.4.0/distributarepo_v0.4.0_darwin_amd64.tar.gz"
+      sha256 "508eb323df52ffb1983e61e5efb2e7a4cc1c27244e90f9f5f1958b596a523f5e"
 
       def install
         bin.install "distributarepo"
       end
     end
-    on_arm do
-      url "https://github.com/ldez/distributarepo/releases/download/v0.3.0/distributarepo_v0.3.0_darwin_arm64.tar.gz"
-      sha256 "575d7b5ba6675e3b92fd7ce48013c09e7a1869ff405e15adfd16b8aed7d146e6"
+    if Hardware::CPU.arm?
+      url "https://github.com/ldez/distributarepo/releases/download/v0.4.0/distributarepo_v0.4.0_darwin_arm64.tar.gz"
+      sha256 "a912c2449050a5c77f46a2e6f84fe996d73d0d2c4fda5969284937f44da5b1d7"
 
       def install
         bin.install "distributarepo"
@@ -27,30 +27,30 @@ class Distributarepo < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/distributarepo/releases/download/v0.3.0/distributarepo_v0.3.0_linux_amd64.tar.gz"
-        sha256 "1778cf5004b157d5b15abb7872f801ab5b99e0aa7ddeb5b693134440594f0416"
+        url "https://github.com/ldez/distributarepo/releases/download/v0.4.0/distributarepo_v0.4.0_linux_amd64.tar.gz"
+        sha256 "d0e13551622442e46410464f667dac15aa1ac493f1cc4f4d6fe9ae539f7058dc"
 
         def install
           bin.install "distributarepo"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/distributarepo/releases/download/v0.3.0/distributarepo_v0.3.0_linux_armv6.tar.gz"
-        sha256 "8e18f365f4731fdd940e54e092338892ea2e369a33c715513e0cd960d0ee62ff"
+        url "https://github.com/ldez/distributarepo/releases/download/v0.4.0/distributarepo_v0.4.0_linux_armv6.tar.gz"
+        sha256 "504a73927d5f4c1196616919439c82c3d87854c26077ff8d63117f2dd6812d0f"
 
         def install
           bin.install "distributarepo"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ldez/distributarepo/releases/download/v0.3.0/distributarepo_v0.3.0_linux_arm64.tar.gz"
-        sha256 "a35c92628cbe4c5103cca8b7cca210c1f62bbf14f03c5ce3f2d3b8701cf7108f"
+        url "https://github.com/ldez/distributarepo/releases/download/v0.4.0/distributarepo_v0.4.0_linux_arm64.tar.gz"
+        sha256 "02d35458d2f389a20b51612dc5e2e306390c5434f7e39f53f8f55107dad0ff88"
 
         def install
           bin.install "distributarepo"
